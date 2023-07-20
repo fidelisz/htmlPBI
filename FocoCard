@@ -1,0 +1,84 @@
+Cards Financeiro = 
+var saldo = "R$" & [saldo atual]
+var gasto =  "R$" & [gasto]
+var deposito = "R$" & [deposito total]
+return
+"
+<!-- Componente OpenXBI, ajude-nos a compartilhar conhecimento -->
+<!-- https://openxbi.com.br -->
+<div class='card-container'>
+  <div class='card-content'>
+      <div class='card'>
+          <strong>Saldo Atual das Contas</strong>
+          <p> "& saldo &"</p>
+      </div>
+      <div class='card'>
+          <strong>Gastos Atuais na Plataforma</strong>
+          <p>"& gasto &"</p>
+      </div>
+      <div class='card'>
+          <strong>Depósito Total na Plataforma</strong>
+          <p>"& deposito &"</p>
+      </div>
+  </div>
+</div>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.card-content {
+  display: flex;
+  /*flex-direction: column; /* Remova essa linha para deixar alinha horizontalmente */
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  font-family: 'Inter', sans-serif; /* Font Inter, remova para exibir font nativa do PowerBI - SegoeUI */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.31);
+  width: 340px; /* Largura dos cards */
+  height: 88px; /* Altura dos cards */
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 0;
+  transition: 200ms all;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  color: #fff; /* Cor do texto em branco */
+  font-weight: bold; /* Texto em negrito */
+}
+
+.card > strong {
+  display: block;
+  margin: auto;
+}
+
+.card-content:hover .card {
+  filter: blur(2px); /* força do ofuscamento */
+  opacity: .7; /* opacidade dos cards ofuscados */
+  transform: scale(.98);
+  box-shadow: none;
+}
+
+.card-content:hover .card:hover {
+  transform: scale(1);
+  filter: blur(0px);
+  opacity: 1;
+  background: #a261d4; /* Cor de fundo roxo claro */
+  color: #fff; /* Cor do texto em branco */
+  box-shadow: 0 0 5px 0px #a261d4; /* Sombra roxa clara */
+}
+</style>
+"
