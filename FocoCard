@@ -4,8 +4,7 @@ var gasto =  "R$" & [gasto]
 var deposito = "R$" & [deposito total]
 return
 "
-<!-- Componente OpenXBI, ajude-nos a compartilhar conhecimento -->
-<!-- https://openxbi.com.br -->
+
 <div class='card-container'>
   <div class='card-content'>
       <div class='card'>
